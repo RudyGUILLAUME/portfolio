@@ -1,284 +1,860 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Port-folio de Rudy GUILLAUME</title>
-</head>
+<html class="dark scroll-smooth" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Développeur</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#92b7c9]"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <header
+        class="sticky top-0 z-50 w-full bg-background-dark/80 backdrop-blur-sm"
+      >
+        <div class="max-w-[960px] mx-auto px-4 sm:px-10">
+          <div
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233c48] py-3"
+          >
+            <a class="flex items-center gap-4 text-white" href="#presentation">
+              <div class="size-6 text-primary">
+                <svg
+                  fill="none"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Rudy GUILLAUME
+              </h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-9">
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#presentation"
+                >Présentation</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#projets"
+                >Projets</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#experience"
+                >Expérience</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#competences"
+                >Compétences</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#contact"
+                >Contact</a
+              >
+            </nav>
+            <div class="md:hidden">
+              <button class="text-white">
+                <span class="material-symbols-outlined">menu</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="layout-container flex h-full grow flex-col">
+        <div class="px-4 sm:px-10 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <section class="py-16 md:py-24" id="presentation">
+              <div class="@container">
+                <div
+                  class="flex flex-col gap-10 @[864px]:flex-row-reverse @[864px]:items-center"
+                >
+                  <div
+                    class="w-full @[864px]:w-1/2 flex justify-center @[864px]:justify-end"
+                  >
+                    <div
+                      class="w-full max-w-sm aspect-square rounded-full overflow-hidden border-4 border-primary shadow-lg"
+                    >
+                      <img
+                        src="/images/Rudy.png"
+                        alt="Portrait de Rudy Guillaume"
+                        class="object-contain w-full h-full -scale-x-100"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col gap-6 @[864px]:w-1/2 @[864px]:justify-center"
+                  >
+                    <div class="flex gap-3 pr-4">
+                      <div
+                        class="flex flex-col items-start justify-center rounded-full bg-[#233c48] px-3 py-2"
+                      >
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="material-symbols-outlined text-red-400 text-base"
+                            >lens</span
+                          >
+                          <p
+                            class="text-white text-sm font-medium leading-normal"
+                          >
+                            Actuellement indisponible
+                          </p>
+                        </div>
+                        <p class="text-xs text-[#92b7c9] mt-1">
+                          Prochaine disponibilité : 09/09/2026
+                        </p>
+                      </div>
+                    </div>
 
-<body>
-    <section class="main">
-        <div class="main-width">
-            <header>
-                <div class="logo">
-                    <h2><a href="#"></a><i class="fa-solid fa-circle-exclamation fa-beat-fade" style="color: #ffea00;"></i> Site en construction </h2>
+                    <div class="flex flex-col gap-2 text-left">
+                      <h1
+                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                      >
+                        Développeur Full-Stack
+                      </h1>
+                      <h2
+                        class="text-[#92b7c9] text-base font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal"
+                      >
+                        Je transforme des idées complexes en applications web
+                        élégantes et intuitives. Spécialisé dans la création
+                        d'expériences utilisateur fluides et performantes.
+                      </h2>
+                    </div>
+                    <a
+                      class="flex max-w-[240px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                      href="#projets"
+                    >
+                      <span class="truncate">Voir mes projets</span>
+                    </a>
+                  </div>
                 </div>
-
-                <nav>
-                    <ul>
-                        <li><a href="#">Ma présentation</a></li>
-                        <li><a href="#skills">Mes compétences</a></li>
-                        <li><a href="#projects">Mes projets</a></li>
-                        
-                    </ul>
-                </nav>
-
-            </header>
-
-            <div class="content">
-                <div class="main-text">
-                    
-                    <h3>Développeur Web</h3>
-                    <h1>Rudy GUILLAUME</h1>
-                    <p>
-                        Développeur web passionné par l'innovation et la création de solutions numériques sur mesure. Actuellement en quête d'une alternance en tant que concepteur développeur d'application, je souhaite mettre mon expertise et ma créativité au service d'une entreprise dynamique.
-                        <br>
-                        <br>
-                        Avec une solide formation en développement front-end et back-end, et une expérience pratique sur des projets diversifiés, je suis prêt à relever les défis techniques et à contribuer activement à la réussite de vos projets. Découvrez mes réalisations et n'hésitez pas à me contacter pour discuter de la manière dont je peux apporter une valeur ajoutée à votre équipe.
+              </div>
+            </section>
+            <section class="py-16 md:py-24" id="projets">
+              <h2
+                class="text-white text-[28px] font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5"
+              >
+                Projets
+              </h2>
+              <div
+                class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 p-4"
+              >
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Abstract gradient representing an e-commerce platform"
+                    style="background-image: url('')"
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      Sorties.com
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      sorties.com est une plateforme web de gestion de sorties
+                      entre amis, en famille ou dans un cadre professionnel.
+                      Elle permet d’organiser, rejoindre et gérer des événements
+                      facilement à travers une interface moderne et intuitive.
                     </p>
-                    <a href="/downloading/CV ENI.pdf" class="cta"><i class="fa-solid fa-download" style="color: #ffffff;"></i>Télécharger mon CV</a>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Symfony</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >PHP</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Tailwind CSS</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Gestion de projet agile</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Git</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/sorties.com"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-                <div class="social">
-                    <a class="link-social" href="https://www.linkedin.com/in/rudy-guillaume/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a class="link-social" href="https://github.com/RudyGUILLAUME"><i class="fa-brands fa-github"></i></a>
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Image of a collaborative task management board"
+                    style="background-image: url('')"
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      eBIDou
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      Projet d'un site web d'enchères dans le cadre de l'ENI
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Java</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Spring Boot</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Microsoft SQL Server</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Microsoft Azure</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/Projet-Encheres"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-                <div class="image">
-                    <img src="./images/devweb.png" alt="">
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Modern and clean website for a tech startup"
+                    style="background-image: url('')"
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      O'Quiz
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      Plateforme de jeu quiz en ligne
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Symfony</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >PHP</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Gestion de projet agile</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Git</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >API</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >React</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/Projet-Oquiz-back"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-            </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Weather data visualization"
+                    style="background-image: url('')"
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      O'flix
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      Catalogue de series et films
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Symfony</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >PHP</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Twig</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Bootstrap</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Git</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/O-flix"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Weather data visualization"
+                    style="
+                      background-image: url('/images/Capture\ d\'écran\ 2025-10-22\ 151232.png');
+                    "
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      Formula 1
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      Site pour suivre les classements et données de la formule
+                      1
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Symfony</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >PHP</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Twig</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Tailwind</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Git</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/O-flix"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl bg-[#15232a] p-5 border border-[#233c48] transition-transform hover:-translate-y-1"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Weather data visualization"
+                    style="
+                      background-image: url('/images/Capture\ d\'écran\ 2025-10-22\ 145615.png');
+                    "
+                  ></div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold leading-normal">
+                      Elevage Chien
+                    </h3>
+                    <p
+                      class="text-[#92b7c9] text-sm font-normal leading-normal mt-1"
+                    >
+                      Création d'un site pour un eleveur de chiens
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Symfony</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >PHP</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Base de données</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Twig</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Bootstrap</span
+                      >
+                      <span
+                        class="text-primary bg-primary/20 text-xs font-medium px-2.5 py-1 rounded-full"
+                        >Git</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mt-auto pt-2">
+                    <a
+                      class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+                      href="https://github.com/RudyGUILLAUME/O-flix"
+                    >
+                      <span class="material-symbols-outlined">link</span>Lien
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="py-16 md:py-24" id="experience">
+              <h2
+                class="text-white text-[28px] font-bold leading-tight tracking-[-0.015em] px-4 pb-10 pt-5"
+              >
+                Expériences Professionnelles
+              </h2>
+              <div class="relative grid grid-cols-1 md:grid-cols-2 gap-x-12">
+                <div
+                  class="absolute top-0 left-1/2 w-0.5 h-full bg-[#233c48] hidden md:block"
+                ></div>
+                <div class="relative mb-12 md:mb-0 md:pr-12 group">
+                  <div class="md:text-right">
+                    <p class="text-sm font-medium text-primary">
+                      Octobre 2024 - Septembre 2026
+                    </p>
+                    <div
+                      class="relative mt-2 bg-[#15232a] border border-[#233c48] p-6 rounded-xl shadow-lg transition-all duration-300 group-hover:border-primary group-hover:shadow-primary/20"
+                    >
+                      <div
+                        class="absolute top-1/2 -translate-y-1/2 -right-3 size-6 bg-background-dark rounded-full hidden md:flex items-center justify-center"
+                      >
+                        <div
+                          class="size-3 bg-primary rounded-full ring-4 ring-background-dark transition-all duration-300 group-hover:ring-primary/20"
+                        ></div>
+                      </div>
+                      <h3 class="text-white text-xl font-bold">
+                        Développeur Java - Alternance
+                      </h3>
+                      <p class="text-[#92b7c9] font-medium mt-1">POUJOULAT</p>
+                      <ul
+                        class="list-disc pl-5 mt-4 space-y-2 text-sm text-[#92b7c9]"
+                      >
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden md:block"></div>
+                <div class="hidden md:block"></div>
+
+                <div class="relative mb-12 md:mb-0 md:pl-12 group">
+                  <div class="md:text-left">
+                    <p class="text-sm font-medium text-primary">
+                      Juin 2024 - Juillet 2024
+                    </p>
+                    <div
+                      class="relative mt-2 bg-[#15232a] border border-[#233c48] p-6 rounded-xl shadow-lg transition-all duration-300 group-hover:border-primary group-hover:shadow-primary/20"
+                    >
+                      <div
+                        class="absolute top-1/2 -translate-y-1/2 -left-3 size-6 bg-background-dark rounded-full hidden md:flex items-center justify-center"
+                      >
+                        <div
+                          class="size-3 bg-primary rounded-full ring-4 ring-background-dark transition-all duration-300 group-hover:ring-primary/20"
+                        ></div>
+                      </div>
+                      <h3 class="text-white text-xl font-bold">
+                        Développeur Symfony - Stage
+                      </h3>
+                      <p class="text-[#92b7c9] font-medium mt-1">
+                        DESTINATION NUMERIQUE
+                      </p>
+                      <ul
+                        class="list-disc pl-5 mt-4 space-y-2 text-sm text-[#92b7c9]"
+                      >
+                        <li>Création d'une APIRest avec Symfony</li>
+                        <li>
+                          Collaboration avec les designers UI/UX pour
+                          transformer les maquettes en produits fonctionnels.
+                        </li>
+                        <li>
+                          Amélioration de 20% des performances du site web en
+                          optimisant le code et les assets.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="py-16 md:py-24" id="competences">
+              <h2
+                class="text-white text-[28px] font-bold leading-tight tracking-[-0.015em] px-4 pb-10 pt-5"
+              >
+                Etudes et Compétences
+              </h2>
+              <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-4">
+                    Etudes & Diplômes
+                  </h3>
+                  <div
+                    class="p-5 rounded-lg bg-[#15232a] border border-[#233c48]"
+                  >
+                    <p class="font-bold text-white">
+                      Concepteur Développeur d'Applications
+                    </p>
+                    <p class="text-primary text-sm">
+                      Ecole National d'Informatique
+                    </p>
+                    <p class="text-xs text-[#92b7c9] mt-1">2024 - 2026</p>
+                  </div>
+                  <div
+                    class="p-5 mb rounded-lg bg-[#15232a] border border-[#233c48]"
+                  >
+                    <p class="font-bold text-white">
+                      Développeur Web & Web Mobile
+                    </p>
+                    <p class="text-primary text-sm">O'Clock</p>
+                    <p class="text-xs text-[#92b7c9] mt-1">2023 - 2024</p>
+                  </div>
+                </div>
+
+                <div class="space-y-6">
+                  <div>
+                    <h3 class="text-white text-xl font-bold mb-4">
+                      Langages &amp; Bases de données
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >HTML</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >CSS/SCSS</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >JavaScript</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >PHP</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Java</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Microsoft SQL Server</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Microsoft Azure</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >MySQL</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >MariaDB</span
+                      >
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold mb-4">
+                      Frameworks &amp; Librairies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Symfony</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Spring Boot</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Bootstrap</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Tailwind</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Angular</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >React</span
+                      >
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Autres</h3>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Git</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Gestion de projet agile</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >Microsoft 365</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >API Rest</span
+                      >
+                      <span
+                        class="bg-[#233c48] text-white text-sm font-medium px-4 py-2 rounded-lg"
+                        >JetBrains : WebStorm, Intellij, PHPStorm</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="py-16 md:py-24" id="contact">
+              <div class="text-center">
+                <h2
+                  class="text-white text-[28px] font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Contact
+                </h2>
+                <p class="max-w-xl mx-auto mt-2 text-base">
+                  N'hésitez pas à me contacter pour toute proposition de projet
+                  ou collaboration. Je serais ravi d'échanger avec vous.
+                </p>
+              </div>
+              <div class="max-w-xl mx-auto mt-10">
+                <form action="#" class="space-y-6" method="POST">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-white"
+                      for="name"
+                      >Nom</label
+                    >
+                    <input
+                      autocomplete="name"
+                      class="mt-1 block w-full rounded-lg border-transparent bg-[#15232a] focus:border-primary focus:ring-primary text-white"
+                      id="name"
+                      name="name"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-white"
+                      for="email"
+                      >Email</label
+                    >
+                    <input
+                      autocomplete="email"
+                      class="mt-1 block w-full rounded-lg border-transparent bg-[#15232a] focus:border-primary focus:ring-primary text-white"
+                      id="email"
+                      name="email"
+                      type="email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-white"
+                      for="message"
+                      >Message</label
+                    >
+                    <textarea
+                      class="mt-1 block w-full rounded-lg border-transparent bg-[#15232a] focus:border-primary focus:ring-primary text-white"
+                      id="message"
+                      name="message"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button
+                      class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark transition-colors"
+                      type="submit"
+                    >
+                      Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="flex justify-center gap-6 mt-12">
+                <a
+                  aria-label="GitHub"
+                  class="text-white hover:text-primary transition-colors"
+                  href="https://github.com/RudyGUILLAUME"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  aria-label="LinkedIn"
+                  class="text-white hover:text-primary transition-colors"
+                  href="https://www.linkedin.com/in/rudy-guillaume/"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </section>
+          </div>
         </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <header class="nav-skills">
-
-            <div class="logo">
-                <h2><a href="#"></a><i class="fa-solid fa-circle-exclamation fa-beat-fade" style="color: #ffea00;"></i> Site en construction </h2>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#">Ma présentation</a></li>
-                    <li><a href="#skills">Mes compétences</a></li>
-                    <li><a href="#projects">Mes projets</a></li>
-                    
-                </ul>
-            </nav>
-
-        </header>
-        <div class="header-skills">
-            <h2>Mes compétences</h2>
-        </div>
-        <div class="inner">
-            <div class="container">
-                <div class="front ">
-                    <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/HTML.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>HTML 5</h3>
-                    </div>
-                    
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/CSS.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>CSS 3</h3>
-                    </div>
-                    
-                </div>
-                
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/JS-rond.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>JavaScript</h3>
-                    </div>
-                    
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/React.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>React </h3>
-                        <p>(en cours)</p>
-                    </div>
-                    
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/pngegg.png" class="a1 skill-icon floating-image">
-                        </div>
-                        <h3>Bootstrap</h3>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="back">
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/pngegg (3).png" class="skill-icon floating-image">
-                        </div>
-                        <h3>PHP</h3>
-                    </div>
-                    
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/pngegg (2).png" class="skill-icon floating-image">
-                        </div>
-                        <h3>Symfony</h3>
-                    </div>
-                    
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/SQL.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>mySQL</h3>
-                    </div>
-                
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/wordpres.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>WordPress</h3>
-                    </div>
-                    
-                </div>
-            </div>
-        
-            <div class="tools">
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/Git.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>Git</h3>
-                    </div>
-                    
-                </div>
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/visual-studio-code-icon.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>VS Code</h3>
-                    </div>
-                    
-                </div>
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/Anssi.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>Cybersécurité</h3>
-                        <a class="a2" href="/downloading/cybersecu.pdf"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Certifié</a>
-                    </div>
-                      
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <header class="nav-skills">
-
-            <div class="logo">
-                <h2><a href="#"></a><i class="fa-solid fa-circle-exclamation fa-beat-fade" style="color: #ffea00;"></i> Site en construction </h2>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#">Ma présentation</a></li>
-                    <li><a href="#skills">Mes compétences</a></li>
-                    <li><a href="#projects">Mes projets</a></li>
-                </ul>
-            </nav>
-
-        </header>
-        <div class="header-skills">
-            <h2>Mes projets</h2>
-        </div>
-            <div class="julie">
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/logo-v2 (2).png" class="skill-icon floating-image">
-                        </div>
-                        <h3>Projet de fin de formation - O'quiz</h3>
-                        <p>O'quiz est mon projet de fin de formation. C'est un site de jeu de quiz développé par une équipe de 6 personnes dans le cadre de la formation Développeur Web & Web Mobile</p>
-                    </div>
-                    <a class="a2" href="https://github.com/RudyGUILLAUME/O-quiz">Voir le projet sur GitHub</a>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/hat.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>Poudlock</h3>
-                        <p>Petite application faite en JavaScript afin de m'entrainer sur les conditions</p>
-                    </div>
-                    <a class="a2" href="https://github.com/RudyGUILLAUME/poudlock">Voir le projet sur GitHub</a>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/tableau.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>O'tableau</h3>
-                        <p>Projet JavaScript afin de m'entrainer sur les boucles</p>
-                    </div>
-                    <a class="a2" href="https://github.com/RudyGUILLAUME/O-tableau">Voir le projet sur GitHub</a>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <div class="img">
-                            <img src="./images/favicon.png" class="skill-icon floating-image">
-                        </div>
-                        <h3>O'flix</h3>
-                        <p>Projet Symfony complet (spécialisation Symfony)</p>
-                    </div>
-                    <a class="a2" href="https://github.com/RudyGUILLAUME/O-flix">Voir le projet sur GitHub</a>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-title">
-                        <h3>D'autre projets sont à venir...</h3>
-                    </div>
-                    <a class="a2" href="https://github.com/RudyGUILLAUME">Voir tous mes projets GitHub</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-</body>
-<script src="/script.js"></script>
+      </main>
+      <footer class="w-full text-center py-6 border-t border-[#233c48]">
+        <p class="text-sm text-[#92b7c9]">
+          © 2025 Rudy GUILLAUME. Tous droits réservés.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
